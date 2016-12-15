@@ -1,0 +1,64 @@
+<html>
+<head>
+    <h1>Create A Topic</h1>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Create A Topic</title>
+    <a class="item" href="/">Home</a> -
+    <a class="item" href="/cat/aboutus">About Us</a>
+
+
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="menu">
+
+
+        </div>
+        <div id="content">
+
+
+            <title>Create A Categorie</title>
+            <table border="1">
+                <td class="leftpart">
+
+<br />
+<br />
+
+
+
+
+
+
+
+
+                    <form method='get' action='/topics/insert'>
+    Subject: <input type="text" name="topic_subject" />
+    Category:
+
+    <select id="topic_cat" name="topic_cat">
+        <% for(var i=0; topics.length > i; i++ ) { %>
+        <option value="<%= topics[i].topic_cat %>"><%= topics[i].cat_name %></option>
+        <% } %>
+    </select>
+
+
+    <input type="submit" value="Create topic" />
+
+                    </form>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+

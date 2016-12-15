@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <div id="wrapper">
+        <div id="menu">
+            <a class="item" href="/">Home</a> -
+            <a class="item" href="/cat/add">Create a topic</a> -
+            <a class="item" href="/cat/aboutus">About Us</a>
+
+            <div id="userbar">
+                <div id="userbar">Not you? Log out.</div>
+            </div>
+            <div id="content">
+
+
+
+
+                <br />
+
+                <h2>Topics in <%= result[0].cat_name%> </h2>
+                <title>Topic - <%= result[0].topic_name %></title>
+                </head>
+
+<body>
+<h1></h1>
+<ul>
+
+    <li>Topic ID: <%= result[0].topic_id%></li>
+    <li>Topic Subject: <%= result[0].topic_subject %></li>
+    <li>Topic Date: : <%= result[0].topic_date %></li>
+    <li>Topic Cat : <%= result[0].topic_cat %></li>
+
+
+
+</ul>
+</body>
+
+</html>

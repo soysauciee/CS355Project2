@@ -1,0 +1,61 @@
+
+<html>
+<head>
+
+
+    <title>The Tech. Forum</title>
+    <h1>The Tech. Forum </h1>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+
+    <title>The Forum</title>
+
+    <a class="item" href="/">Home</a> -
+    <a class="item" href="/topics/add">Create a topic</a> -
+    <a class="item" href="/cat/add">Create A Category</a>-
+    <a class="item" href="/cat/aboutus">About Us</a>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+            <div id="menu">
+
+
+
+                </div>
+                <div id="content">
+
+            <br />
+
+            <br />
+
+            <table border="1">
+                <tr><th>Categories</th>  <th>Categories Description </th>   </tr>
+                <% for(var i=0; result.length > i; i++ ) { %>
+                <tr>
+                    <td><a href="/cat/?cat_id=<%= result[i].cat_id %>"><%= result[i].cat_name %></a></td>
+                    <td><%= result[i].cat_description  %> </td> </td>
+                    <td>
+
+                        <form action="/delete/" style="display:inline;">
+
+                            <input type="hidden" name="cat_id" id="cat_id" value="<%= result[i].cat_id %>" />
+                            <input type="submit" value="Delete"/>
+                        </form>
+
+                    </td>
+                </tr>
+                <% } %>
+            </table>
+
+
+</body>
+
+
+
+
+
